@@ -433,7 +433,7 @@ function Workflow() {
               My Editing <span className="text-red">Process</span>
             </>
           }
-          subtitle="A repeatable pipeline that turns raw automotive footage into cinema-grade films."
+          subtitle="A structured workflow that transforms raw footage into polished, engaging videos."
         />
 
         <div className="relative mt-16">
@@ -534,7 +534,7 @@ function Skills() {
               Skills & <span className="text-red">Software</span>
             </>
           }
-          subtitle="The tools and techniques I use daily to craft premium automotive edits."
+          subtitle="The tools and techniques I use to bring ideas to life through precise editing, sound design, motion graphics, and color."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
