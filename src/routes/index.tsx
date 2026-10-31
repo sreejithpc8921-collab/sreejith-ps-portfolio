@@ -101,14 +101,14 @@ function Home() {
 
 function Hero() {
   return (
-   <section id="home" className="relative overflow-hidden hero-bg pt-24 md:pt-28 pb-10 md:pb-12">
+    <section id="home" className="relative overflow-hidden hero-bg pt-32 md:pt-40 pb-20 md:pb-28">
       <div className="absolute inset-0 opacity-60">
         <ParticleBg />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background pointer-events-none" />
 
-      <motion.div
-  className="relative mx-auto grid max-w-7xl grid-cols-1 justify-items-center items-center gap-12 px-6 text-center"
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-[1.15fr_0.85fr]">
+        <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -117,17 +117,17 @@ function Hero() {
             <span className="h-1.5 w-1.5 rounded-full bg-red animate-pulse" />
             Available for new projects
           </span>
-          <h1 className="mt-4 text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] text-balance">
+          <h1 className="mt-6 text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] text-balance">
             Sreejith <span className="text-red">PS</span>
           </h1>
-          <p className="mt-2 text-xl md:text-2xl font-medium text-white/90">
+          <p className="mt-4 text-xl md:text-2xl font-medium text-white/90">
              Video Editor
           </p>
-          <p className="mt-4 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
             I transform raw footage into engaging, polished videos through strong storytelling, precise pacing, sound design, motion graphics, and professional color grading.
           </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3">
+          <div className="mt-10 flex flex-wrap items-center gap-3">
             <MagneticButton
               variant="primary"
               onClick={() =>
@@ -153,6 +153,34 @@ function Hero() {
             </MagneticButton>
           </div>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+          className="relative mx-auto w-full max-w-md"
+        >
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 shadow-elegant animate-float-slow">
+            <div
+              className="absolute inset-0 -z-10 blur-3xl opacity-60"
+              style={{
+                background:
+                  "radial-gradient(60% 40% at 50% 0%, oklch(0.62 0.24 25 / 0.5), transparent)",
+              }}
+            />
+            <img
+              src={heroPortrait}
+              alt="Portrait of Sreejith PS, video editor"
+              className="h-full w-full object-cover"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-white/80">
+      
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }
@@ -574,7 +602,7 @@ function Resume() {
           <div className="mt-8 flex justify-center">
             <MagneticButton
               variant="primary"
-              href="/Sreejith Resume.pdf"
+             href="https://fgpiaazzvbrinvztuuxl.supabase.co/storage/v1/object/public/portfolio-assets/resume/resume.pdf"
               download
               target="_blank"
               rel="noreferrer"
